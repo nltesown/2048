@@ -9,12 +9,15 @@ var board = [ // Test board
 	[8, 2, 4, 8]
 ];
 
-var dir = 2; // Direction
+var dir = 1; // Direction
 
 drawBoard(board);
+console.log(findEmptyCells(board));
+
 for (var i = 0; i < 6; ++i) {
-	console.log(board = pushPieces(board, dir).board);
+	board = pushPieces(board, dir).board;
 	drawBoard(board);
+	console.log(findEmptyCells(board));
 }
 
 /**
@@ -87,6 +90,18 @@ function dumbRotate(board, times) { // -3 <= times <= 3
 		board = rotatedBoard;
 	}
 	return board;
+}
+
+function findEmptyCells (board) {
+	var i, j, emptyCells = [];
+	for (i = 0; i < 4; ++i) {
+		for (j = 0; j < 4; ++j) {
+			if (board[i][j] === 0) {
+				emptyCells.push([i, j]);
+			}
+		}
+	}
+	return emptyCells;
 }
 
 function drawBoard (board) { // Temp
