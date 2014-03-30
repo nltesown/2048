@@ -1,3 +1,3 @@
-* 2048 *
+# 2048
 
 A minimalistic implementation.
