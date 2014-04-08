@@ -4,16 +4,31 @@
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
         <style>
+        body {
+            position: relative;
+        }
         .board {
-            display: block; float: left;
-            margin: 24px; border: solid 1px red;
-            width: 200px; height: 200px;
+            display: block;
+            margin: 24px auto; border: solid 3px #444;
+            width: 300px; height: 300px;
         }
         .board > div {
             display: block; float: left;
-            width: 48px; height: 48px; border: solid 1px red;
-            text-align: center; line-height: 48px;
+            width: 69px; height: 69px; border: solid 3px #444; background-color: #ddd;
+            text-align: center; line-height: 73px; font-size: 28px; font-weight: bold; font-family: Arial; color: #444;
         }
+
+
+        div.c2 { color: #369; background-color: #9cf; }
+        div.c4 { color: #639; background-color: #c9f;}
+        div.c8 { color: #936; background-color: #f9c;}
+        div.c16 { color: #396; background-color: #9fc;}
+        div.c32 { color: #693; background-color: #cf9;}
+        div.c64 { color: #963; background-color: #fc9;}
+        div.c128 {}
+
+
+
         </style>
     </head>
     <body>
